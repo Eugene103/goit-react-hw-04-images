@@ -2,6 +2,7 @@ import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem"
 import { List, Item } from "./ImageGallery.styled";
 
 export const ImageGallery = ({ images }) => {
+
     const { hits } = images
     const result = hits.filter((el => f => !el.has(f.id) && el.add(f.id))(new Set()));
     if (result.length === 0) {
